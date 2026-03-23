@@ -29,6 +29,10 @@ extracter() {
                     tar -xzvf "$path" -C "$target_path"
                 ;;
 
+                *.tar.xz)
+                    tar -xvf "$path" -C "$target_path"
+                ;;
+
                 *.tar.zst)
                     tar --zstd -xvf "$path" -C "$target_path"
                 ;;
